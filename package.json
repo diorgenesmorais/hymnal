@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Tocador de hinos",
   "main": "app.js",
+  "bin": "app.js",
   "repository": "https://github.com/diorgenesmorais/hymnal",
   "author": "Diorgenes Morais",
   "license": "MIT",
