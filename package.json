@@ -2,10 +2,13 @@
   "name": "hymnal",
   "version": "1.0.0",
   "description": "Tocador de hinos",
-  "main": "index.js",
+  "main": "app.js",
   "repository": "https://github.com/diorgenesmorais/hymnal",
   "author": "Diorgenes Morais",
   "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "express": "^4.19.2"
   }
