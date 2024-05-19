@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/diorgenesmorais/hymnal",
   "author": "Diorgenes Morais",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
