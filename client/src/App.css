@@ -28,12 +28,13 @@ input {
 
 .made-by {
   position: fixed;
-  left: 0;
+  right: 20px;
   bottom: 0;
   width: 100%;
   color: white;
-  text-align: center;
+  text-align: right;
   padding: 10px 0;
+  font-size: 10px;
 }
 
 .search-video {
