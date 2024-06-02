@@ -1,12 +1,7 @@
-import express from 'express';
-import path from 'path';
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-import open from 'open';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const express = require('express');
+const path = require('path');
+const fs = require('fs');
+const { exec } = require('child_process');
 
 const app = express();
 const PORT = 5000;
@@ -30,7 +25,18 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
+function openBrowser(url) {
+    const start =
+      process.platform == 'darwin' ? 'open' :
+      process.platform == 'win32' ? 'start' :
+      'xdg-open';
+    exec(`${start} ${url}`);
+  }
+
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-    open(`http://localhost:${PORT}`);
+    const url = `http://localhost:${PORT}`;
+  console.log(`Server is running on ${url}`);
+  
+  // Abre o navegador
+  openBrowser(url);
 });
